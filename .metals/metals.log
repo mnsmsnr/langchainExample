@@ -1,0 +1,35 @@
+2023.06.17 17:29:00 INFO  Started: Metals version 0.11.12 in workspace '/Users/masanorimanase/work/workspace/langchainExample' for client Visual Studio Code 1.76.2.
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+情報: Flyway Community Edition 9.16.3 by Redgate
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.license.VersionPrinter printVersion
+情報: See release notes here: https://rd.gt/416ObMi
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.license.VersionPrinter printVersion
+情報: 
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+情報: Database: jdbc:h2:file:/Users/masanorimanase/work/workspace/langchainExample/.metals/metals (H2 2.1)
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+情報: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbValidate validate
+情報: Successfully validated 4 migrations (execution time 00:00.027s)
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+情報: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate migrateGroup
+情報: Current version of schema "PUBLIC": << Empty Schema >>
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+情報: Migrating schema "PUBLIC" to version "1 - Create tables"
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+情報: Migrating schema "PUBLIC" to version "2 - Server discovery"
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+情報: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+情報: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+6月 17, 2023 5:29:01 午後 org.flywaydb.core.internal.command.DbMigrate logSummary
+情報: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.088s)
+2023.06.17 17:29:01 INFO  time: initialize in 0.72s
+2023.06.17 17:29:05 WARN  Build server is not auto-connectable.
+2023.06.17 17:29:08 WARN  no build target for: /Users/masanorimanase/work/workspace/langchainExample/langchainscala/src/main/scala/example/exucuteDavinci.scala
+2023.06.17 17:29:14 INFO  no build target found for /Users/masanorimanase/work/workspace/langchainExample/langchainscala/src/main/scala/example/exucuteDavinci.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.06.17 17:29:17 INFO  time: code lens generation in 7.23s
+2023.06.17 17:29:45 WARN  no build target for: /Users/masanorimanase/work/workspace/langchainExample/langchainscala/src/main/scala/example/exucuteDavinci.scala
+6月 17, 2023 5:29:58 午後 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+情報: Unsupported notification method: $/setTrace
