@@ -43,9 +43,38 @@ object ExecuteDavinci extends Greeting {
       model = "text-davinci-003",
       maxTokens = 256
     )
-    service.createCompletion(completionRequest).getChoices().foreach(println)
+    val choices = service.createCompletion(completionRequest).getChoices()
+    val results = choices.map { choice =>
+      val text = choice.getText()
+      val res = extractTextBetween(text, "返事：", "和訳：")
+      val tr = extractTextBetween(text, "和訳：", "指摘：", inclusiveEnd = false)
+      val po = extractTextAfter(text, "指摘：")
+      Map("res" -> res, "tr" -> tr, "po" -> po)
+    }
+    results.toArray
   }
-
+  private def extractTextBetween(text: String, startTag: String, endTag: String, inclusiveEnd: Boolean = true): String = {
+    val startIndex = text.indexOf(startTag)
+    if (startIndex != -1) {
+      val endIndex = text.indexOf(endTag, startIndex + startTag.length)
+      if (endIndex != -1) {
+        val adjustedEndIndex = if (inclusiveEnd) endIndex + endTag.length else endIndex
+        text.substring(startIndex + startTag.length, adjustedEndIndex).trim
+      } else {
+        ""
+      }
+    } else {
+      ""
+    }
+  }
+  private def extractTextAfter(text: String, startTag: String): String = {
+    val startIndex = text.indexOf(startTag)
+    if (startIndex != -1) {
+      text.substring(startIndex + startTag.length).trim
+    } else {
+      ""
+    }
+  }
 }
 
 trait Greeting {
